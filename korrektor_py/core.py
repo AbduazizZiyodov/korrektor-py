@@ -1,6 +1,7 @@
-import json
 import typing as t
-from .api import Client
+
+from korrektor_py.api import Client
+from korrektor_py.models import *
 
 
 class Korrektor:
@@ -15,35 +16,73 @@ class Korrektor:
         self,
         words: t.List[str],
         remove_modifiers: t.Optional[bool] = False,
-    ):
+    ) -> ResponseData:
+        return self.client.send(
+            "spellCheck",
+            SpellCheckData,
+            words=words,
+            remove_modifiers=remove_modifiers
+        )
+
+    def transliterate(self, alphabet: str, text: str) -> ResponseText:
+        return self.client.send(
+            "transliterate",
+            TransliterateData,
+            text=text,
+            alphabet=alphabet,
+        )
+
+    def auto_correct(self, text: str) -> ResponseText:
+        return self.client.send(
+            "autoCorrect",
+            AutoCorrectData,
+            text=text,
+        )
+
+    def remove_modifiers(self, text: str) -> ResponseText:
+        return self.client.send(
+            "remModifiers",
+            RemoveModifiersData,
+            text=text,
+        )
+
+    def tokenize(self, word: str) -> ResponseText:
+        return self.client.send(
+            "tokenize",
+            TokenizeData,
+            word=word,
+        )
+
+    def number_to_words(self, num: int) -> ResponseText:
+        return self.client.send(
+            "numToWords",
+            NumberToWordsData,
+            num=num,
+        )
+
+    def word_frequency(self, text: str) -> ResponseData:
+        return self.client.send(
+            "wordFrequency",
+            WordFrequencyData,
+            text=text,
+        )
+
+    def remove_duplicates(self, text: str) -> ResponseText:
+        return self.client.send(
+            "removeDublicates",
+            RemoveDuplicatesData,
+            text=text,
+        )
+
+    def alphabet_sorting(self, text: str) -> ResponseText:
+        return self.client.send(
+            "alphabetSorting",
+            AlphabetSortingData,
+            text=text,
+        )
+
+    def ocr(self, image: t.Any) -> dict:
         ...
 
-    def transliterate(alphabet: str, text: str):
-        ...
-
-    def auto_correct(text: str):
-        ...
-
-    def remove_modifiers(text: str):
-        ...
-
-    def tokenize(word: str):
-        ...
-
-    def number_to_words(num: int):
-        ...
-
-    def word_frequency(text: str):
-        ...
-
-    def remove_duplicates(text: str):
-        ...
-
-    def alphabet_sorting(text: str):
-        ...
-
-    def ocr(image: t.Any):
-        ...
-
-    def doc(doc: t.Any, alphabet: str):
+    def doc(self, doc: t.Any, alphabet: str) -> dict:
         ...

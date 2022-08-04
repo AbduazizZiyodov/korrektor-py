@@ -41,3 +41,5 @@ REMOVE_DUPLICATES_DATA = {
 ALPHABET_SORTING_DATA = {
     "text": "shahlo\nsalom\no'zbek\nsalom\ndunyo"
 }
+
+OCR_DATA = "tests/assets/example.png"

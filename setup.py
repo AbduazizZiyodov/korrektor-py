@@ -1,5 +1,5 @@
 if __name__ == "__main__":
     from setuptools import setup
-    from korrektor_py import __version__
+    from __version__ import version
 
-    setup(version=__version__)
+    setup(version=version)

@@ -1,0 +1,33 @@
+name: Korrektor-Py CI
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "korrektor_py/**"
+      - ".github/workflows/ci.yml"
+      - "requirements.txt"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Build Project
+        run: |
+          python -m pip install -U pip 
+          python setup.py sdist bdist_wheel
+
+      - name: Install Korrektor-py
+        run: |
+          VERSION=$(python -c "from korrektor_py import __version__;print(__version__)")
+          pip install dist/Korrektor_Py-$VERSION-py3-none-any.whl
+
+      - name: Run tests
+        run: pytest -s tests/

@@ -24,22 +24,24 @@ class Alphabet(BaseModel):
 
 
 class SpellCheckData(BaseModel):
-    words: t.List[Word]
-    remove_modifiers: t.Optional[True]
-
-
-class TransliterateData(BaseModel):
-    text: Text
-    alphabet: Alphabet
+    words: t.List[str]
+    remove_modifiers: t.Optional[bool] = False
 
 
 class OcrData(BaseModel):
     image: t.Any
 
 
-class DocData(BaseModel):
+class DocData(Alphabet):
     doc: t.Any
-    alphabet: Alphabet
+
+
+class NumberToWordsData(BaseModel):
+    num: int
+
+
+class TransliterateData(Alphabet, Text):
+    ...
 
 
 class AutoCorrectData(Text):
@@ -52,10 +54,6 @@ class RemoveModifiersData(Text):
 
 class TokenizeData(Word):
     ...
-
-
-class NumberToWordsData(Text):
-    num: int
 
 
 class WordFrequencyData(Text):

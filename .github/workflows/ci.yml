@@ -30,4 +30,6 @@ jobs:
           pip install dist/Korrektor_Py-$VERSION-py3-none-any.whl
 
       - name: Run tests
+        env:
+          KORREKTOR_TOKEN: ${{ secrets.KORREKTOR_TOKEN }}
         run: pytest -s tests/

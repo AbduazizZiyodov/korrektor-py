@@ -50,21 +50,6 @@ class SpellCheckData(BaseModel):
         response_model = ResponseData
 
 
-class OcrData(BaseModel):
-    image: t.Any
-
-
-class DocData(Alphabet):
-    doc: t.Any
-
-
-class NumberToWordsData(BaseModel):
-    num: int
-
-    class Config:
-        response_model = ResponseText
-
-
 class TransliterateData(Alphabet, Text):
     class Config:
         response_model = ResponseText
@@ -85,6 +70,13 @@ class TokenizeData(Word):
         response_model = ResponseText
 
 
+class NumberToWordsData(BaseModel):
+    num: int
+
+    class Config:
+        response_model = ResponseText
+
+
 class WordFrequencyData(Text):
     class Config:
         response_model = ResponseData
@@ -98,6 +90,17 @@ class RemoveDuplicatesData(Text):
 class AlphabetSortingData(Text):
     class Config:
         response_model = ResponseText
+
+
+class OcrData(BaseModel):
+    image: bytes
+
+    class Config:
+        response_model = ResponseText
+
+
+class DocData(Alphabet):
+    doc: t.Any
 
 
 __all__ = [

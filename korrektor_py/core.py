@@ -2,6 +2,7 @@ import typing as t
 
 from korrektor_py.api import Client
 from korrektor_py.models import *
+from korrektor_py.models import OcrData
 
 
 class Korrektor:
@@ -81,8 +82,15 @@ class Korrektor:
             text=text,
         )
 
-    def ocr(self, image: t.Any) -> dict:
-        ...
+    def ocr(self, image_file_path: str) -> ResponseText:
+        with open(image_file_path, "rb") as file:
+            image: bytes = file.read()
+
+        return self.client.send(
+            "ocr",
+            OcrData,
+            image=image,
+        )
 
     def doc(self, doc: t.Any, alphabet: str) -> dict:
         ...

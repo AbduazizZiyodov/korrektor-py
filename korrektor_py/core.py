@@ -1,8 +1,8 @@
 import typing as t
 
-from korrektor_py.api import Client
 from korrektor_py.models import *
-from korrektor_py.models import OcrData
+from korrektor_py.api import Client
+from korrektor_py.models import FileResponse
 
 
 class Korrektor:
@@ -18,7 +18,7 @@ class Korrektor:
         words: t.List[str],
         remove_modifiers: t.Optional[bool] = False,
     ) -> ResponseData:
-        return self.client.send(
+        return self.client.send_json(
             "spellCheck",
             SpellCheckData,
             words=words,
@@ -26,7 +26,7 @@ class Korrektor:
         )
 
     def transliterate(self, alphabet: str, text: str) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "transliterate",
             TransliterateData,
             text=text,
@@ -34,63 +34,69 @@ class Korrektor:
         )
 
     def auto_correct(self, text: str) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "autoCorrect",
             AutoCorrectData,
             text=text,
         )
 
     def remove_modifiers(self, text: str) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "remModifiers",
             RemoveModifiersData,
             text=text,
         )
 
     def tokenize(self, word: str) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "tokenize",
             TokenizeData,
             word=word,
         )
 
     def number_to_words(self, num: int) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "numToWords",
             NumberToWordsData,
             num=num,
         )
 
     def word_frequency(self, text: str) -> ResponseData:
-        return self.client.send(
+        return self.client.send_json(
             "wordFrequency",
             WordFrequencyData,
             text=text,
         )
 
     def remove_duplicates(self, text: str) -> ResponseText:
-        return self.client.send(
-            "removeDublicates",
+        return self.client.send_json(
+            "removeDuplicates",
             RemoveDuplicatesData,
             text=text,
         )
 
     def alphabet_sorting(self, text: str) -> ResponseText:
-        return self.client.send(
+        return self.client.send_json(
             "alphabetSorting",
             AlphabetSortingData,
             text=text,
         )
 
     def ocr(self, image_file_path: str) -> ResponseText:
-        with open(image_file_path, "rb") as file:
-            image: bytes = file.read()
-
-        return self.client.send(
+        return self.client.send_image(
             "ocr",
-            OcrData,
-            image=image,
+            image_file_path=image_file_path,
         )
 
-    def doc(self, doc: t.Any, alphabet: str) -> dict:
-        ...
+    def doc(
+        self,
+        document_path: str,
+        alphabet: str,
+        save_path: t.Optional[str] = None,
+    ) -> FileResponse:
+        return self.client.send_document(
+            "doc",
+            document_path=document_path,
+            alphabet=alphabet,
+            save_path=save_path,
+        )

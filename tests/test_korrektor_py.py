@@ -93,3 +93,10 @@ def test_alphabet_sorting():
 def test_ocr():
     result = korrektor.ocr(constants.OCR_DATA)
     assert_response_ok("text", result)
+
+
+def test_dpc():
+    result = korrektor.doc(**constants.DOC_DATA)
+
+    assert result.status == "File saved."
+    assert os.path.isfile(constants.DOC_DATA["save_path"])

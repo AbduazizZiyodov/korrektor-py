@@ -43,3 +43,10 @@ ALPHABET_SORTING_DATA = {
 }
 
 OCR_DATA = "tests/assets/example.png"
+
+
+DOC_DATA = {
+    "document_path": "tests/assets/example.docx",
+    "alphabet": "cyrillic",
+    "save_path": "tests/assets/test-file.docx"
+}

@@ -22,12 +22,21 @@ class Response(BaseModel):
     code: str
 
 
+class ResponseError(Response):
+    description: str
+
+
 class ResponseText(Response, Text):
     ...
 
 
 class ResponseData(Response, Data):
     ...
+
+
+class FileResponse(BaseModel):
+    file_name: str
+    status: str
 
 
 class Alphabet(BaseModel):
@@ -100,7 +109,10 @@ class OcrData(BaseModel):
 
 
 class DocData(Alphabet):
-    doc: t.Any
+    doc: bytes
+
+    class Config:
+        response_model = FileResponse
 
 
 __all__ = [

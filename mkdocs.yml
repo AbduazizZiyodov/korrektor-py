@@ -41,7 +41,7 @@ theme:
 
 plugins:
   - search:
-      lang: en
+      lang: uz
 
 extra:
   social:

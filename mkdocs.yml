@@ -1,0 +1,90 @@
+site_name: Korrektor-Py
+site_url: http://abduazizziyodov.github.io/korrektor-py
+site_description: Korrektor-Py - python library & wrapper for API of the https://korrektor.uz
+
+repo_name: korrektor-py
+repo_url: https://github.com/AbduazizZiyodov/korrektor-py
+
+edit_uri: ""
+
+theme:
+  logo: fontawesome/brands/python
+  icon:
+    admonition:
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      example: octicons/beaker-16
+
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Kunduzgi rejimga o'tish
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tungi rejimga o'tish
+
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - navigation.top
+
+  language: uz
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AbduazizZiyodov/korrektor-py
+      name: See this project on Github
+
+copyright: Copyright &copy; 2022 Abduaziz Ziyodov
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - css/custom.css
+
+nav:
+  - Kirish. O'rnatish: index.md
+  - Ishni boshlash: quickstart.md
+  - Asosiy va "Response" obyektlari: objects.md
+  - Mavjud metodlar:
+      - Metod - spell_check: methods/spell_check.md
+      - Metod - transliterate: methods/transliterate.md
+      - Metod - auto_correct: methods/auto_correct.md
+      - Metod - remove_modifiers: methods/remove_modifiers.md
+      - Metod - tokenize: methods/tokenize.md
+      - Metod - number_to_words: methods/number_to_words.md
+      - Metod - word_frequency: methods/word_frequency.md
+      - Metod - remove_duplicates: methods/remove_duplicates.md
+      - Metod - alphabet_sorting: methods/alphabet_sorting.md
+      - Metod - ocr: methods/ocr.md
+      - Metod - doc: methods/doc.md
+  - Sinovdan o'tkazish (pytest): testing.md

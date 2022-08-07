@@ -8,7 +8,6 @@ repo_url: https://github.com/AbduazizZiyodov/korrektor-py
 edit_uri: ""
 
 theme:
-  logo: fontawesome/brands/python
   icon:
     admonition:
       abstract: octicons/checklist-16

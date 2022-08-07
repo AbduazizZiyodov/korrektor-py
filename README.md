@@ -1,8 +1,8 @@
 # :gb: **Korrektor-Py**
 
-![](assets/logo.png)
-
 <p align="center">
+    <img src="assets/logo.png"></img> <br>
+     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> <br>
     <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
 </p>
 
@@ -30,14 +30,12 @@ pip install Korrektor_Py-*.whl
 - Owner: [Manuchehr Usmonov](https://github.com/con9799)
 - Author of this library: [Abduaziz Ziyodov](https://github.com/AbduazizZiyodov)
 
-
-
 # :uzbekistan: **Korrektor-Py**
 
-![](assets/logo.png)
-
 <p align="center">
-    <b>Korrektor-Py</b> - https://korrektor.uz loyihasining API'si uchun ishlab chiqilgan python dasturlash tilidagi kutubxona.
+    <img src="assets/logo.png"></img> <br>
+     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> <br>
+    <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
 </p>
 
 ## **O'rnatish**

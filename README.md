@@ -6,7 +6,8 @@
      <img src="https://static.pepy.tech/personalized-badge/korrektor-py?period=total&units=international_system&left_color=blue&right_color=green&left_text=Downloads"></img>
      <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/deploy_docs.yml/badge.svg"></img>
      <br>
-    <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
+    <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz <br>
+    Documentation - https://abduazizziyodov.github.io/korrektor-py <br>
 </p>
 
 ## **Installation**
@@ -41,7 +42,9 @@ pip install Korrektor_Py-*.whl
      <img src="https://static.pepy.tech/personalized-badge/korrektor-py?period=total&units=international_system&left_color=blue&right_color=green&left_text=Yuklab%20olishlar%20soni"></img>
      <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/deploy_docs.yml/badge.svg"></img>
      <br>
-    <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
+    <b>Korrektor-Py</b> - https://korrektor.uz loyihasining API'si uchun ishlab chiqilgan python kutubxona. 
+    <br>
+    Yo'riqnoma(dokumentatsiya) - https://abduazizziyodov.github.io/korrektor-py
 </p>
 
 ## **O'rnatish**

@@ -1,7 +1,5 @@
 # **Korrektor-Py**
 
-![](assets/logo.png)
-
 <p align="center">
     <img src="assets/logo.png"></img> <br>
      <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> 

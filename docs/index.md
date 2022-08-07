@@ -3,7 +3,11 @@
 ![](assets/logo.png)
 
 <p align="center">
-    <b>Korrektor-Py</b> - korrektor.uz loyihasining <code>API</code>si uchun ishlab chiqilgan python dasturlash tilidagi kutubxona.
+    <img src="assets/logo.png"></img> <br>
+     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> 
+     <img src="https://static.pepy.tech/personalized-badge/korrektor-py?period=total&units=international_system&left_color=blue&right_color=green&left_text=Yuklab%20olishlar%20soni"></img>
+     <br>
+    <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
 </p>
 
 ## **Loyiha haqida**

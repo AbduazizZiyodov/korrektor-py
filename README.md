@@ -2,7 +2,8 @@
 
 <p align="center">
     <img src="assets/logo.png"></img> <br>
-     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> <br>
+     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img>
+     <img src="https://static.pepy.tech/personalized-badge/korrektor-py?period=total&units=international_system&left_color=blue&right_color=green&left_text=Downloads"></img><br>
     <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
 </p>
 
@@ -34,7 +35,9 @@ pip install Korrektor_Py-*.whl
 
 <p align="center">
     <img src="assets/logo.png"></img> <br>
-     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> <br>
+     <img src="https://github.com/AbduazizZiyodov/korrektor-py/actions/workflows/ci.yml/badge.svg?branch=master"></img> 
+     <img src="https://static.pepy.tech/personalized-badge/korrektor-py?period=total&units=international_system&left_color=blue&right_color=green&left_text=Yuklab%20olishlar%20soni"></img>
+     <br>
     <b>Korrektor-Py</b> - python library & wrapper for API of the https://korrektor.uz
 </p>
 

@@ -51,5 +51,5 @@ Yoki:
 
 <hr>
 
-- Loyiha asoschisi: [Manuchehr Usmonov](https://github.com/con9799)
+- Loyiha asoschisi: [Manuchehr Usmonov](https://github.com/yetimdasturchi)
 - Ushbu kutubxona muallifi: [Abduaziz Ziyodov](https://github.com/AbduazizZiyodov)

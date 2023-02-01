@@ -31,7 +31,7 @@ pip install Korrektor_Py-*.whl
 
 <hr>
 
-- Owner: [Manuchehr Usmonov](https://github.com/con9799)
+- Owner: [Manuchehr Usmonov](https://github.com/yetimdasturchi)
 - Author of this library: [Abduaziz Ziyodov](https://github.com/AbduazizZiyodov)
 
 # :uzbekistan: **Korrektor-Py**
@@ -68,5 +68,5 @@ pip install Korrektor_Py-*.whl
 
 <hr>
 
-- Loyiha asoschisi: [Manuchehr Usmonov](https://github.com/con9799)
+- Loyiha asoschisi: [Manuchehr Usmonov](https://github.com/yetimdasturchi)
 - Ushbu kutubxona muallifi: [Abduaziz Ziyodov](https://github.com/AbduazizZiyodov)
